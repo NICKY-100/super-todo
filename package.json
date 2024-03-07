@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "dev": "./node_modules/.bin/esbuild ./src/app.js --sourcemap --bundle --outdir=dev --watch --servedir=dev"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "esbuild": "^0.20.1",
+    "jest-environment-jsdom": "^29.7.0",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "super-libraries": "github:NICKY-100/super-libraries"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
