@@ -9,8 +9,9 @@ jobs:
   unit-test:
  
     run-on: ubuntu-latest
-    steps: 
+    steps:
     - uses: actions/checkout@v3
+    - name: Run Tests
       uses: actions/setup-node@v3
       with:
         node-version: 20.x
