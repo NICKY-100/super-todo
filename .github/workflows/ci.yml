@@ -2,18 +2,18 @@ name: test app
 
 on:
   pull_request:
-  workflow_dispatch:
   push:
     branches: [main]
 
-    jobs:
-      unit-test:
-        name: Run Tests
-        run-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v3
-          uses: actions/setup-@nodev3
-          with:
-            node-version: "20"
-        - run: npm install
-        - run: npm run test
+jobs:
+  unit-test:
+ 
+    run-on: ubuntu-latest
+    steps:
+    - name: Run Tests
+    - uses: actions/checkout@v3
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+    - run: npm install
+    - run: npm run test
