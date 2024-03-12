@@ -1,9 +1,9 @@
 name: test app
 
 on:
-   pull_request:
-   workflow_dispatch:
-   push:
+  pull_request:
+  workflow_dispatch:
+  push:
     branches: [main]
 
     jobs:
@@ -11,9 +11,9 @@ on:
         name: Run Tests
         run-on: ubuntu-latest
         steps:
-          -uses: actions/checkout@v2
-          -uses: actions/setup@nodev1
-             with:
-                node-version: "20"
-          -run: npm install
-          -run: npm run test
+        - uses: actions/checkout@v3
+          uses: actions/setup-@nodev3
+          with:
+            node-version: "20"
+        - run: npm install
+        - run: npm run test
